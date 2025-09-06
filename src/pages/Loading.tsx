@@ -1,29 +1,18 @@
-// src/components/Loading.js
 import React from 'react';
 
 const Loading = () => {
     return (
-        <div style={styles.container}>
-            <div style={styles.text}>ENUG LAND AGENT</div>
+        <div className="flex justify-center items-center h-screen bg-white">
+            {/* Spinner */}
+            <div className="relative flex items-center justify-center">
+                <div className="animate-spin rounded-full border-t-4 border-green-500 border-solid w-16 h-16 mb-4"></div>
+                {/* Text Below Spinner */}
+                <div className="absolute text-2xl font-bold text-green-500 letter-spacing-[0.1em]">
+                    ENUG LAND AGENT
+                </div>
+            </div>
         </div>
     );
-};
-
-const styles = {
-    container: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        backgroundColor: '#fff',
-    },
-    text: {
-        fontSize: '2.5rem',
-        fontWeight: 'bold',
-        color: '#4CAF50',
-        letterSpacing: '0.1em',
-        animation: 'fadeIn 2s ease-in-out infinite',
-    },
 };
 
 export default Loading;
