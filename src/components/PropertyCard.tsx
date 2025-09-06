@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { MapPin, Home, TreePine, Heart } from "lucide-react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 interface PropertyCardProps {
   id: string;
@@ -108,7 +108,7 @@ const PropertyCard = ({ id, title, type, price, location, size, status, imageUrl
           View Details
         </Button>
         <Button className="flex-1" disabled={status === "sold"}>
-          {status === "sold" ? "Sold" : "Contact Agent"}
+          {status === "sold" ? "Sold" : <Link to='/contact'>Contact Agent</Link>}
         </Button>
       </CardFooter>
     </Card>

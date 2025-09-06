@@ -111,7 +111,7 @@ const HeroCarousel = () => {
               {slides[currentSlide].cta}
             </Button>
           </Link>
-          <Link to="/auth">
+          <Link to="/properties">
             <Button size="lg" variant="outline" className="text-lg px-8 py-4 bg-background/20 backdrop-blur-sm border-background/30 text-background hover:bg-background hover:text-foreground hover-scale">
               List Your Property
             </Button>
